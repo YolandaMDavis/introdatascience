@@ -1,0 +1,51 @@
+{"ts":1369272520804,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"import MapReduce\nimport json\nimport sys\n\n# Map function\n# mr - MapReduce object\n# data - json object formatted as a string\ndef mapper(mr, data):\n    data = json.loads(dataline, encoding='latin-1')\n\n    # output (key, value) pair (only for mapper)\n    mr.emit_intermediate(key, value)\n\n# Reduce function\n# mr - MapReduce object\n# key - key generated from map phse, associated to list_of_values\n# list_of_values - values generated from map phase, associated to key\ndef reducer(mr, key, list_of_values):\n\n    # output item (only for reducer)\n    mr.emit(item)\n\ndef main():\n    # Assumes first argument is a file of json objects formatted as strings, \n    #one per line.\n    MapReduce.execute(open(sys.argv[1]), mapper, reducer)\n\nif __name__ == '__main__':\n    main()\n"]],"start1":0,"start2":0,"length1":0,"length2":764}]],"length":764}
+{"ts":1369272755302,"patch":[[{"diffs":[[0,"    "],[-1,"# output (key, value) pair (only for mapper)"],[1,"words = tweet[\"text\"].split()            \n            for word in words: "],[0,"\n   "]],"start1":198,"start2":198,"length1":52,"length2":81}]],"length":793,"saved":false}
+{"ts":1369272759780,"patch":[[{"diffs":[[0,"       \n"],[-1,"        "],[0,"    for "]],"start1":236,"start2":236,"length1":24,"length2":16}]],"length":785,"saved":false}
+{"ts":1369272768942,"patch":[[{"diffs":[[0,"s = "],[-1,"tweet"],[1,"data"],[0,"[\"te"]],"start1":206,"start2":206,"length1":13,"length2":12}]],"length":784,"saved":false}
+{"ts":1369272788378,"patch":[[{"diffs":[[0,"words: \n"],[1,"    "],[0,"    mr.e"]],"start1":259,"start2":259,"length1":16,"length2":20}]],"length":788,"saved":false}
+{"ts":1369272796694,"patch":[[{"diffs":[[0,"mediate("],[-1,"key"],[1,"d"],[0,", value)"]],"start1":288,"start2":288,"length1":19,"length2":17}]],"length":786,"saved":false}
+{"ts":1369272800849,"patch":[[{"diffs":[[0,"ediate(d"],[1,"ata"],[0,", value)"]],"start1":289,"start2":289,"length1":16,"length2":19}]],"length":789,"saved":false}
+{"ts":1369272802063,"patch":[[{"diffs":[[0,"ate(data"],[1,"[]"],[0,", value)"]],"start1":292,"start2":292,"length1":16,"length2":18}]],"length":791,"saved":false}
+{"ts":1369272803099,"patch":[[{"diffs":[[0,"te(data["],[1,"\""],[0,"], value"]],"start1":293,"start2":293,"length1":16,"length2":17}]],"length":792,"saved":false}
+{"ts":1369272804563,"patch":[[{"diffs":[[0,"e(data[\""],[1,"\""],[0,"], value"]],"start1":294,"start2":294,"length1":16,"length2":17}]],"length":793,"saved":false}
+{"ts":1369272805632,"patch":[[{"diffs":[[0,"e(data[\""],[1,"doci"],[0,"\"], valu"]],"start1":294,"start2":294,"length1":16,"length2":20}]],"length":797,"saved":false}
+{"ts":1369272806559,"patch":[[{"diffs":[[0,"ta[\"doci"],[1,"d"],[0,"\"], valu"]],"start1":298,"start2":298,"length1":16,"length2":17}]],"length":798,"saved":false}
+{"ts":1369272811375,"patch":[[{"diffs":[[0,"\"doc"],[-1,"id"],[1,"u"],[0,"\"], "]],"start1":301,"start2":301,"length1":10,"length2":9}]],"length":797,"saved":false}
+{"ts":1369272813414,"patch":[[{"diffs":[[0,"ta[\"docu"],[1,"ment_id"],[0,"\"], valu"]],"start1":298,"start2":298,"length1":16,"length2":23}]],"length":804,"saved":false}
+{"ts":1369272819336,"patch":[[{"diffs":[[0,"tin-1')\n"],[-1,"\n"],[0,"    word"]],"start1":189,"start2":189,"length1":17,"length2":16}]],"length":803,"saved":false}
+{"ts":1369272837779,"patch":[[{"diffs":[[0,"words: \n"],[1,"        \n"],[0,"        "]],"start1":258,"start2":258,"length1":16,"length2":25}]],"length":812,"saved":false}
+{"ts":1369272839545,"patch":[[{"diffs":[[0,"       \n"],[-1,"    "],[0,"    mr.e"]],"start1":267,"start2":267,"length1":20,"length2":16}]],"length":808,"saved":false}
+{"ts":1369272842602,"patch":[[{"diffs":[[0,": \n        \n"],[1,"    "],[0,"    mr.emit_"]],"start1":263,"start2":263,"length1":24,"length2":28}]],"length":812,"saved":false}
+{"ts":1369272844725,"patch":[[{"diffs":[[0,"words: \n"],[-1,"        \n"],[0,"        "]],"start1":258,"start2":258,"length1":25,"length2":16}]],"length":803,"saved":false}
+{"ts":1369272978001,"patch":[[{"diffs":[[0,"ads(data"],[-1,"line"],[0,", encodi"]],"start1":163,"start2":163,"length1":20,"length2":16}]],"length":799,"saved":false}
+{"ts":1369273010250,"patch":[[{"diffs":[[0,"ate("],[-1,"data[\"document_id\"]"],[0,", va"]],"start1":287,"start2":287,"length1":27,"length2":8}]],"length":780,"saved":false}
+{"ts":1369273016083,"patch":[[{"diffs":[[0,"ediate(,"],[-1," value"],[1,"data[\"document_id\"]"],[0,")\n\n# Red"]],"start1":284,"start2":284,"length1":22,"length2":35}]],"length":793,"saved":false}
+{"ts":1369273020985,"patch":[[{"diffs":[[0,"mediate("],[1,"eq5q"],[0,",data[\"d"]],"start1":283,"start2":283,"length1":16,"length2":20}]],"length":797,"saved":false}
+{"ts":1369273022844,"patch":[[{"diffs":[[0,"ate("],[-1,"eq5q"],[0,",dat"]],"start1":287,"start2":287,"length1":12,"length2":8}]],"length":793,"saved":false}
+{"ts":1369273024048,"patch":[[{"diffs":[[0,"mediate("],[1,"word"],[0,",data[\"d"]],"start1":283,"start2":283,"length1":16,"length2":20}]],"length":797,"saved":false}
+{"ts":1369273179826,"patch":[[{"diffs":[[0,"mr.emit("],[-1,"item"],[1,"()"],[0,")\n\ndef m"]],"start1":576,"start2":576,"length1":20,"length2":18}]],"length":795,"saved":false}
+{"ts":1369273182040,"patch":[[{"diffs":[[0,"r.emit(("],[1,"key"],[0,"))\n\ndef "]],"start1":577,"start2":577,"length1":16,"length2":19}]],"length":798,"saved":false}
+{"ts":1369273183296,"patch":[[{"diffs":[[0,"mit((key"],[1,","],[0,"))\n\ndef "]],"start1":580,"start2":580,"length1":16,"length2":17}]],"length":799,"saved":false}
+{"ts":1369273185419,"patch":[[{"diffs":[[0,"it((key,"],[1,"\","],[0,"))\n\ndef "]],"start1":581,"start2":581,"length1":16,"length2":18}]],"length":801,"saved":false}
+{"ts":1369273186019,"patch":[[{"diffs":[[0,"((key,\","],[1,"\""],[0,"))\n\ndef "]],"start1":583,"start2":583,"length1":16,"length2":17}]],"length":802,"saved":false}
+{"ts":1369273188702,"patch":[[{"diffs":[[0,"(key,\",\""],[1,".join"],[0,"))\n\ndef "]],"start1":584,"start2":584,"length1":16,"length2":21}]],"length":807,"saved":false}
+{"ts":1369273190851,"patch":[[{"diffs":[[0,"\",\".join"],[1,"(list_"],[0,"))\n\ndef "]],"start1":589,"start2":589,"length1":16,"length2":22}]],"length":813,"saved":false}
+{"ts":1369273193479,"patch":[[{"diffs":[[0,"in(list_"],[1,"of_values"],[0,"))\n\ndef "]],"start1":595,"start2":595,"length1":16,"length2":25}]],"length":822,"saved":false}
+{"ts":1369273393918,"patch":[[{"diffs":[[0,"\n   "],[-1," # Assumes first argument is a file of json objects formatted as strings, \n    #one per line."],[0,"\n   "]],"start1":627,"start2":627,"length1":101,"length2":8}]],"length":729,"saved":false}
+{"ts":1369273397720,"patch":[[{"diffs":[[0," main():"],[-1,"\n"],[0,"   \n    "]],"start1":619,"start2":619,"length1":17,"length2":16}]],"length":728,"saved":false}
+{"ts":1369273409779,"patch":[[{"diffs":[[0,"    "],[-1,"# output item (only for reducer)"],[0,"\n   "]],"start1":535,"start2":535,"length1":40,"length2":8}]],"length":696,"saved":false}
+{"ts":1369273412587,"patch":[[{"diffs":[[0,"lues):\n\n"],[-1,"    \n"],[0,"    mr.e"]],"start1":527,"start2":527,"length1":21,"length2":16}]],"length":691,"saved":false}
+{"ts":1369273416578,"patch":[[{"diffs":[[0,"])\n\n"],[-1,"# Reduce function\n# mr - MapReduce object\n# key - key generated from map phse, associated to list_of_values\n# list_of_values - values generated from map phase, associated to key\n"],[0,"def "]],"start1":314,"start2":314,"length1":186,"length2":8}]],"length":513,"saved":false}
+{"ts":1369273424927,"patch":[[{"diffs":[[0,"ys\n\n"],[-1,"# Map function\n# mr - MapReduce object\n# data - json object formatted as a string"],[0,"\ndef"]],"start1":37,"start2":37,"length1":89,"length2":8}]],"length":432,"saved":false}
+{"ts":1369273426155,"patch":[[{"diffs":[[0,"rt sys\n\n"],[-1,"\n"],[0,"def mapp"]],"start1":33,"start2":33,"length1":17,"length2":16}]],"length":431,"saved":false}
+{"ts":1369273429620,"patch":[[{"diffs":[[0,"  main()"],[-1,"\n"]],"start1":422,"start2":422,"length1":9,"length2":8}]],"length":430,"saved":false}
+{"ts":1369273445667,"patch":[[{"diffs":[[0,"alues):\n"],[-1,"\n"],[0,"    mr.e"]],"start1":266,"start2":266,"length1":17,"length2":16}]],"length":429,"saved":false}
+{"ts":1369273523188,"patch":[[{"diffs":[[1,"#"],[0,"import MapRe"]],"start1":0,"start2":0,"length1":12,"length2":13}]],"length":430,"saved":false}
+{"ts":1369273531756,"patch":[[{"diffs":[[-1,"#"],[0,"impo"]],"start1":0,"start2":0,"length1":5,"length2":4}]],"length":429,"saved":false}
+{"ts":1369273554543,"patch":[[{"diffs":[[0,"in():   "],[1," "],[0,"\n    Map"]],"start1":324,"start2":324,"length1":16,"length2":17}]],"length":430,"saved":false}
+{"ts":1369273556371,"patch":[[{"diffs":[[0,"ain():  "],[-1,"  "],[0,"\n    Map"]],"start1":323,"start2":323,"length1":18,"length2":16}]],"length":428,"saved":false}
+{"ts":1369273560466,"patch":[[{"diffs":[[0,":  \n    "],[1,"#"],[0,"MapReduc"]],"start1":328,"start2":328,"length1":16,"length2":17}]],"length":429,"saved":false}
+{"ts":1369273575167,"patch":[[{"diffs":[[0,"    "],[-1,"#"],[0,"MapR"]],"start1":332,"start2":332,"length1":9,"length2":8}]],"length":428,"saved":false}
+{"ts":1369273640022,"patch":[[{"diffs":[[0,"values))"],[1,")"],[0,"\n\ndef ma"]],"start1":308,"start2":308,"length1":16,"length2":17}]],"length":429,"saved":false}
+{"ts":1369273694838,"patch":[[{"diffs":[[0,"tin-1')\n"],[1,"    \n"],[0,"    word"]],"start1":103,"start2":103,"length1":16,"length2":21}]],"length":434,"saved":false}
+{"ts":1369273697669,"patch":[[{"diffs":[[0,"tin-1')\n    "],[1,"print data"],[0,"\n    words ="]],"start1":103,"start2":103,"length1":24,"length2":34}]],"length":444,"saved":false}
